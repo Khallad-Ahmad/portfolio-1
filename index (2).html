@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#11130f" />
+<meta name="description" content="The portfolio of Khallad Ahmad: professional video editor, ads maker and graphic designer at ABN E Abdullah Graphics." />
+<title>ABN E Abdullah Graphics | Khallad Ahmad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* base reset (replaces Tailwind preflight) */
+h1,h2,h3,h4,p,figure,blockquote{margin:0}
+h1,h2,h3,h4{font-size:inherit;font-weight:inherit}
+img,svg,video,iframe{display:block;max-width:100%}
+img{height:auto}
+button{background:transparent;border:0;padding:0;cursor:pointer;color:inherit}
+em{font-style:italic}
+
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #171813;
+  background: #f2f0e9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --ink: #171813;
+  --deep: #11130f;
+  --paper: #f2f0e9;
+  --lime: #d8fb62;
+  --muted: #797a70;
+  --line: rgba(23, 24, 19, 0.18);
+  --mono: "DM Mono", monospace;
+  --display: "Space Grotesk", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+body,
+button,
+a {
+  font-family: "DM Sans", sans-serif;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+::selection {
+  color: var(--ink);
+  background: var(--lime);
+}
+
+.site-shell {
+  overflow: hidden;
+}
+
+.section-inner {
+  width: min(1320px, calc(100% - 104px));
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100svh;
+  overflow: hidden;
+  color: #f5f4ef;
+  background: #11130f;
+}
+
+.hero-photo,
+.hero-wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-photo {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 56%;
+  animation: image-drift 22s cubic-bezier(0.18, 0.62, 0.32, 1) both;
+}
+
+.hero-wash {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 12, 9, 0.95) 0%, rgba(10, 12, 9, 0.8) 37%, rgba(10, 12, 9, 0.36) 73%, rgba(10, 12, 9, 0.16) 100%),
+    linear-gradient(0deg, rgba(10, 12, 9, 0.62) 0%, transparent 28%, rgba(10, 12, 9, 0.24) 100%);
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  width: min(1440px, calc(100% - 104px));
+  min-height: 100svh;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 244, 239, 0.18);
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  line-height: 1.1;
+}
+
+.wordmark-sub {
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(26px, 4vw, 58px);
+  margin-left: auto;
+  margin-right: 54px;
+}
+
+.site-nav a,
+.header-contact {
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 180ms ease;
+}
+
+.site-nav a {
+  position: relative;
+  padding: 8px 0;
+  color: rgba(245, 244, 239, 0.78);
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  height: 1px;
+  background: var(--lime);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 220ms ease;
+}
+
+.site-nav a:hover,
+.header-contact:hover {
+  color: var(--lime);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header-contact,
+.mobile-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-contact svg,
+.mobile-contact-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.mobile-contact-link,
+.menu-toggle {
+  display: none;
+}
+
+.hero-copy {
+  width: min(100%, 1120px);
+  margin: auto 0;
+  padding: 84px 0 112px;
+  animation: rise-in 850ms cubic-bezier(0.2, 0.68, 0.3, 1) 120ms both;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 8.6vw, 8rem);
+  font-weight: 600;
+  letter-spacing: -0.085em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.hero-title > span {
+  display: block;
+}
+
+.hero-title-accent {
+  margin-top: 0.1em;
+  padding-left: 0.08em;
+  color: var(--lime);
+  font-size: 0.66em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.05;
+}
+
+.hero-intro {
+  max-width: 630px;
+  margin: 34px 0 0;
+  color: rgba(245, 244, 239, 0.78);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.button svg,
+.inline-link svg,
+.work-caption svg,
+.back-to-top svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 180ms ease;
+}
+
+.button-primary {
+  padding: 0 20px;
+  color: var(--ink);
+  background: var(--lime);
+}
+
+.button-primary:hover {
+  background: #ecff9b;
+}
+
+.button-text {
+  gap: 10px;
+  color: #f5f4ef;
+}
+
+.button-text:hover {
+  color: var(--lime);
+}
+
+.button:hover svg,
+.inline-link:hover svg,
+.work-caption a:hover svg,
+.back-to-top:hover svg {
+  transform: translate(3px, -2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(245, 244, 239, 0.7);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-scroll svg {
+  width: 18px;
+  height: 18px;
+  color: var(--lime);
+  animation: scroll-cue 1.7s ease-in-out infinite;
+}
+
+.work-section {
+  padding: 122px 0 106px;
+  background: var(--paper);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.section-index {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-index span {
+  color: var(--ink);
+}
+
+.section-heading h2,
+.about-heading h2,
+.contact-heading-row h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3rem, 6.8vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.96;
+}
+
+.section-heading h2 em,
+.about-heading h2 em,
+.contact-heading-row h2 em {
+  font-weight: 400;
+}
+
+.section-intro {
+  max-width: 335px;
+  margin: 0 0 6px;
+  color: #66675d;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.work-player-wrap {
+  margin-top: 58px;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #141610;
+  isolation: isolate;
+}
+
+.video-poster,
+.video-player,
+.poster-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-poster {
+  z-index: 1;
+  object-fit: cover;
+  transition: opacity 300ms ease;
+}
+
+.video-player {
+  z-index: 2;
+  border: 0;
+  background: #141610;
+}
+
+.poster-play {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 0;
+  color: #fff;
+  background: linear-gradient(0deg, rgba(8, 10, 7, 0.3), rgba(8, 10, 7, 0.08));
+  cursor: pointer;
+  transition: background-color 180ms ease, opacity 180ms ease;
+}
+
+.poster-play:hover {
+  background-color: rgba(8, 10, 7, 0.18);
+}
+
+.player-ready .poster-play,
+.player-ready .video-poster {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-symbol {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 50%;
+  background: rgba(17, 19, 15, 0.2);
+  transition: transform 220ms ease, background-color 220ms ease;
+}
+
+.poster-play:hover .play-symbol {
+  background: rgba(216, 251, 98, 0.92);
+  color: var(--ink);
+  transform: scale(1.06);
+}
+
+.play-symbol svg {
+  width: 18px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+.play-copy {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.work-caption {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr auto;
+  align-items: center;
+  gap: 24px;
+  padding-top: 18px;
+  color: #66675d;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.work-caption > span:first-child {
+  color: var(--ink);
+}
+
+.work-caption > span:nth-child(2) {
+  text-align: center;
+}
+
+.work-caption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: end;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+
+.work-caption a:hover {
+  color: #637d19;
+}
+
+.work-caption svg {
+  width: 14px;
+  height: 14px;
+}
+
+.services-section {
+  padding: 120px 0 128px;
+  color: #f2f0e9;
+  background: #171a15;
+}
+
+.services-heading .section-index,
+.services-heading .section-index span {
+  color: rgba(242, 240, 233, 0.56);
+}
+
+.services-heading .section-index span {
+  color: var(--lime);
+}
+
+.services-heading h2 em {
+  color: var(--lime);
+}
+
+.services-heading .section-intro {
+  color: rgba(242, 240, 233, 0.66);
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 76px;
+  margin-top: 70px;
+}
+
+.service-item {
+  position: relative;
+  display: grid;
+  min-height: 140px;
+  grid-template-columns: 40px minmax(0, 1fr) 20px;
+  align-items: start;
+  column-gap: 14px;
+  padding: 24px 0 26px;
+  border-top: 1px solid rgba(242, 240, 233, 0.2);
+}
+
+.service-number {
+  padding-top: 4px;
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.service-item h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.service-item p {
+  max-width: 370px;
+  margin: 9px 0 0;
+  color: rgba(242, 240, 233, 0.62);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.service-arrow {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  color: var(--lime);
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.service-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.service-item:hover .service-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.about-section {
+  padding: 122px 0 128px;
+  background: #e5e2d8;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.65fr;
+  align-items: end;
+  gap: 100px;
+}
+
+.about-heading h2 {
+  max-width: 690px;
+  font-size: clamp(3.2rem, 6.8vw, 6.6rem);
+}
+
+.about-heading h2 em {
+  color: #70795a;
+}
+
+.about-copy {
+  padding-bottom: 7px;
+}
+
+.about-copy p {
+  margin: 0 0 16px;
+  color: #65665d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-copy .about-lead {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.45;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 0 0 7px;
+  border-bottom: 1px solid rgba(23, 24, 19, 0.45);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contact-section {
+  padding: 104px 0 100px;
+  background: var(--lime);
+}
+
+.contact-section .section-index {
+  color: rgba(23, 24, 19, 0.64);
+}
+
+.contact-section .section-index span {
+  color: var(--ink);
+}
+
+.contact-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.contact-heading-row h2 {
+  font-size: clamp(3.2rem, 7.2vw, 7rem);
+}
+
+.contact-heading-row h2 em {
+  color: #55662d;
+}
+
+.contact-heading-row > p {
+  max-width: 300px;
+  margin: 0 0 8px;
+  color: rgba(23, 24, 19, 0.75);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 70px;
+  margin-top: 78px;
+}
+
+.contact-links > a {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 10px 20px;
+  padding: 20px 0 19px;
+  border-top: 1px solid rgba(23, 24, 19, 0.35);
+  transition: border-color 180ms ease;
+}
+
+.contact-links > a:hover {
+  border-color: var(--ink);
+}
+
+.contact-method {
+  grid-column: 1 / -1;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.contact-value {
+  overflow-wrap: anywhere;
+  font-family: var(--display);
+  font-size: clamp(20px, 2.6vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.contact-arrow {
+  width: 19px;
+  height: 19px;
+  margin-bottom: 5px;
+  transition: transform 180ms ease;
+}
+
+.contact-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-links > a:hover .contact-arrow {
+  transform: translate(3px, -3px);
+}
+
+.site-footer {
+  padding: 28px 0;
+  color: rgba(242, 240, 233, 0.7);
+  background: var(--deep);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 10px;
+}
+
+.footer-wordmark {
+  color: #f2f0e9;
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.footer-wordmark span {
+  margin-left: 7px;
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-to-top svg {
+  width: 13px;
+  height: 13px;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 720ms cubic-bezier(0.2, 0.68, 0.3, 1), transform 720ms cubic-bezier(0.2, 0.68, 0.3, 1);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes image-drift {
+  from { transform: scale(1.045); }
+  to { transform: scale(1); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(-2px); }
+  50% { transform: translateY(4px); }
+}
+
+@media (max-width: 900px) {
+  .section-inner,
+  .hero-inner {
+    width: calc(100% - 64px);
+  }
+
+  .site-nav {
+    margin-right: 32px;
+  }
+
+  .section-heading {
+    gap: 32px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 58px;
+  }
+
+  .service-list,
+  .contact-links {
+    column-gap: 44px;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 16px;
+  }
+
+  .section-inner,
+  .hero-inner {
+    width: calc(100% - 40px);
+  }
+
+  .hero {
+    min-height: 710px;
+    min-height: max(710px, 100svh);
+  }
+
+  .hero-photo {
+    object-position: 58% center;
+  }
+
+  .hero-wash {
+    background:
+      linear-gradient(90deg, rgba(10, 12, 9, 0.86) 0%, rgba(10, 12, 9, 0.58) 100%),
+      linear-gradient(0deg, rgba(10, 12, 9, 0.74) 0%, rgba(10, 12, 9, 0.18) 60%, rgba(10, 12, 9, 0.44) 100%);
+  }
+
+  .hero-inner {
+    min-height: inherit;
+  }
+
+  .site-header {
+    min-height: 78px;
+  }
+
+  .wordmark {
+    font-size: 11px;
+  }
+
+  .header-contact {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 4px;
+    border: 0;
+    color: #f5f4ef;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+    transition: transform 180ms ease, width 180ms ease;
+  }
+
+  .menu-toggle span:last-child {
+    width: 17px;
+  }
+
+  .menu-toggle.is-open span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:last-child {
+    width: 24px;
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: -20px;
+    left: -20px;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px 20px 20px;
+    border-bottom: 1px solid rgba(245, 244, 239, 0.2);
+    background: rgba(17, 19, 15, 0.97);
+    backdrop-filter: blur(14px);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(245, 244, 239, 0.12);
+    color: #f5f4ef;
+    font-size: 15px;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  .site-nav .mobile-contact-link {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0;
+    color: var(--lime);
+  }
+
+  .hero-copy {
+    padding: 84px 0 132px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 10.5vw, 4.1rem);
+    letter-spacing: -0.075em;
+  }
+
+  .hero-title-accent {
+    font-size: 0.68em;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-intro {
+    max-width: 480px;
+    margin-top: 27px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 25px;
+  }
+
+  .button {
+    min-height: 48px;
+    font-size: 12px;
+  }
+
+  .button-primary {
+    padding: 0 15px;
+  }
+
+  .hero-scroll {
+    right: 0;
+    bottom: 22px;
+    font-size: 8px;
+  }
+
+  .work-section,
+  .services-section,
+  .about-section {
+    padding: 82px 0 86px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-index {
+    margin-bottom: 20px;
+    font-size: 9px;
+  }
+
+  .section-heading h2,
+  .about-heading h2 {
+    font-size: clamp(3rem, 11vw, 4.7rem);
+  }
+
+  .section-intro {
+    max-width: 380px;
+    margin: 20px 0 0;
+    font-size: 14px;
+  }
+
+  .work-player-wrap {
+    margin-top: 36px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  .video-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .play-symbol {
+    width: 58px;
+    height: 58px;
+  }
+
+  .work-caption {
+    grid-template-columns: 1fr auto;
+    gap: 8px 18px;
+    padding-top: 14px;
+    font-size: 8px;
+  }
+
+  .work-caption > span:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .work-caption a {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+    margin-top: 43px;
+  }
+
+  .service-item {
+    min-height: 120px;
+    grid-template-columns: 32px minmax(0, 1fr) 16px;
+    column-gap: 10px;
+    padding: 20px 0 22px;
+  }
+
+  .service-item h3 {
+    font-size: 21px;
+  }
+
+  .service-item p {
+    margin-top: 7px;
+    font-size: 12px;
+  }
+
+  .service-arrow {
+    opacity: 1;
+    transform: none;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-copy {
+    max-width: 540px;
+  }
+
+  .about-copy .about-lead {
+    font-size: 19px;
+  }
+
+  .contact-section {
+    padding: 80px 0 72px;
+  }
+
+  .contact-heading-row {
+    display: block;
+  }
+
+  .contact-heading-row h2 {
+    font-size: clamp(3rem, 10.8vw, 4.7rem);
+  }
+
+  .contact-heading-row > p {
+    max-width: 330px;
+    margin-top: 22px;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 48px;
+  }
+
+  .contact-links > a {
+    gap: 10px 16px;
+    padding: 16px 0;
+  }
+
+  .contact-value {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .site-footer {
+    padding: 23px 0;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px 10px;
+    font-size: 9px;
+  }
+
+  .footer-inner > span {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .back-to-top {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-inner,
+  .hero-inner {
+    width: calc(100% - 32px);
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-actions {
+    gap: 8px 16px;
+  }
+
+  .button {
+    font-size: 11px;
+  }
+
+  .work-player-wrap {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+
+  .work-caption {
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="site-shell">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <img class="hero-photo" src="https://images.pexels.com/photos/8100067/pexels-photo-8100067.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1400&w=2400&q=88" alt="" aria-hidden="true" fetchpriority="high" />
+    <div class="hero-wash" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="ABN E Abdullah Graphics home"><span class="wordmark-main">ABN E ABDULLAH</span><span class="wordmark-sub">GRAPHICS</span></a>
+        <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a class="mobile-contact-link" href="#contact">Contact <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </nav>
+        <a class="header-contact" href="#contact">Let's talk <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
+      </header>
+      <div class="hero-copy">
+        <h1 class="hero-title" id="hero-title"><span>ABN E ABDULLAH</span><span class="hero-title-accent">GRAPHICS</span></h1>
+        <p class="hero-intro">Khallad Ahmad is a professional video editor, ads maker and graphic designer creating visual work that keeps people watching.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore the work <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          <a class="button button-text" href="#contact">Start a project <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#work" aria-label="Scroll to featured work"><span>Scroll to explore</span><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M10 3.5v12m-5-5 5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </section>
+
+  <main>
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="section-inner">
+        <div class="section-heading work-heading" data-reveal>
+          <div class="heading-copy"><p class="section-index"><span>01</span> / SELECTED WORK</p><h2 id="work-title">Proof in every <em>frame.</em></h2></div>
+          <p class="section-intro">A featured ad and editing sample, playing right here on the page.</p>
+        </div>
+        <div class="work-player-wrap" data-reveal>
+          <div class="video-frame" id="video-frame" aria-label="Featured video work sample">
+            <img class="video-poster" id="video-poster" src="https://img.youtube.com/vi/xLs05JFiX-A/maxresdefault.jpg" alt="Preview of Khallad Ahmad's featured video work sample" loading="lazy" />
+            <button class="poster-play" id="poster-play" type="button" aria-label="Load and play the featured video sample">
+              <span class="play-symbol" aria-hidden="true"><svg viewBox="0 0 18 20" fill="none"><path d="M3 2.5 15 10 3 17.5v-15Z" fill="currentColor"/></svg></span>
+              <span class="play-copy">Play featured sample</span>
+            </button>
+          </div>
+        </div>
+        <div class="work-caption" data-reveal>
+          <span>FEATURED SAMPLE / VIDEO EDIT</span>
+          <span>Tap play to watch the featured sample.</span>
+          <a href="https://www.youtube.com/watch?v=xLs05JFiX-A" target="_blank" rel="noopener">Open on YouTube <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services" aria-labelledby="services-title">
+      <div class="section-inner">
+        <div class="section-heading services-heading" data-reveal>
+          <div class="heading-copy"><p class="section-index"><span>02</span> / WHAT I DO</p><h2 id="services-title">One idea.<br />Every <em>detail.</em></h2></div>
+          <p class="section-intro">From the first cut to the final artwork, a considered visual finish at every step.</p>
+        </div>
+        <div class="service-list" data-reveal>
+          <article class="service-item"><span class="service-number">01</span><div><h3>Video editing</h3><p>Brand films, YouTube videos, reels, shorts and story-led cuts.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+          <article class="service-item"><span class="service-number">02</span><div><h3>Ads and commercials</h3><p>Promotional videos and social ads built to earn attention.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+          <article class="service-item"><span class="service-number">03</span><div><h3>Graphic design</h3><p>Campaign artwork, posters, thumbnails and social creatives.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+          <article class="service-item"><span class="service-number">04</span><div><h3>Motion graphics</h3><p>Animated titles, logo reveals and clean visual transitions.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+          <article class="service-item"><span class="service-number">05</span><div><h3>Brand and social assets</h3><p>Logos and cohesive graphics that keep your brand recognizable.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+          <article class="service-item"><span class="service-number">06</span><div><h3>Color and sound finishing</h3><p>Color grading, audio cleanup and final polish for every frame.</p></div><span class="service-arrow" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="section-inner about-layout" data-reveal>
+        <div class="about-heading"><p class="section-index"><span>03</span> / THE CREATIVE</p><h2 id="about-title">Every frame has a <em>purpose.</em></h2></div>
+        <div class="about-copy">
+          <p class="about-lead">I'm Khallad Ahmad, the creative behind ABN E Abdullah Graphics.</p>
+          <p>I bring editing, advertising and design together to make clear, memorable visuals for brands, creators and businesses.</p>
+          <a class="inline-link" href="#contact">Tell me what you're making <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <div class="contact-intro" data-reveal>
+          <p class="section-index"><span>04</span> / GET IN TOUCH</p>
+          <div class="contact-heading-row"><h2 id="contact-title">Have a story?<br /><em>Let's make it move.</em></h2><p>Have a video, campaign or design project in mind? I'd love to hear about it.</p></div>
+        </div>
+        <div class="contact-links" data-reveal>
+          <a href="https://api.whatsapp.com/send?phone=923085825168&text=Hi%20Khallad%2C%20I%20have%20a%20project%20in%20mind." target="_blank" rel="noopener"><span class="contact-method">WHATSAPP</span><span class="contact-value">+92 308 582 5168</span><span class="contact-arrow"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=khallad925@gmail.com&su=Project%20enquiry" target="_blank" rel="noopener" title="khallad925@gmail.com"><span class="contact-method">EMAIL</span><span class="contact-value"><span class="__cf_email__" data-cfemail="7e35161f12121f1a474c4b3e19131f1712501d1113">[email&#160;protected]</span></span><span class="contact-arrow"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <a class="footer-wordmark" href="#top">ABN E ABDULLAH <span>GRAPHICS</span></a>
+      <span>Independent creative work by Khallad Ahmad</span>
+      <a class="back-to-top" href="#top">Back to top <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 15 5M6 5h9v9" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function () {
+  var VIDEO_ID = "xLs05JFiX-A";
+
+  // Mobile menu
+  var toggle = document.getElementById("menu-toggle");
+  var nav = document.getElementById("primary-navigation");
+  function setMenu(open) {
+    nav.classList.toggle("is-open", open);
+    toggle.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+  }
+  toggle.addEventListener("click", function () { setMenu(!nav.classList.contains("is-open")); });
+  document.querySelectorAll(".site-nav a, .wordmark").forEach(function (a) {
+    a.addEventListener("click", function () { setMenu(false); });
+  });
+
+  // Scroll reveal
+  var reveals = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  if (!("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("is-revealed"); });
+  } else {
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-revealed"); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -36px 0px" });
+    reveals.forEach(function (el) { ro.observe(el); });
+  }
+
+  // Video showcase: load when visible, autoplay muted, pause when out of view
+  var frame = document.getElementById("video-frame");
+  var poster = document.getElementById("video-poster");
+  var playBtn = document.getElementById("poster-play");
+  var iframe = null, entered = false;
+
+  poster.addEventListener("error", function () {
+    poster.src = "https://img.youtube.com/vi/" + VIDEO_ID + "/hqdefault.jpg";
+  }, { once: true });
+
+  function send(func) {
+    if (!iframe || !iframe.contentWindow) return;
+    iframe.contentWindow.postMessage(JSON.stringify({ event: "command", func: func, args: [] }), "*");
+  }
+  function load() {
+    if (iframe) return;
+    var origin = location.protocol !== "file:" ? "&origin=" + encodeURIComponent(location.origin) : "";
+    iframe = document.createElement("iframe");
+    iframe.className = "video-player";
+    iframe.src = "https://www.youtube-nocookie.com/embed/" + VIDEO_ID + "?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&modestbranding=1&enablejsapi=1" + origin;
+    iframe.title = "ABN E Abdullah Graphics video sample by Khallad Ahmad";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.allowFullscreen = true;
+    iframe.addEventListener("load", function () { frame.classList.add("player-ready"); });
+    frame.appendChild(iframe);
+  }
+  var YT_URL = "https://www.youtube.com/watch?v=" + VIDEO_ID;
+  var embedOK = location.protocol === "https:" || location.protocol === "http:";
+  playBtn.addEventListener("click", function () {
+    if (!embedOK) { window.open(YT_URL, "_blank", "noopener"); return; }
+    entered = true; load(); send("playVideo");
+  });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      var e = entries[0];
+      var visible = embedOK && e.isIntersecting && e.intersectionRatio >= 0.22;
+      if (visible) { entered = true; load(); send("playVideo"); }
+      else if (entered) { send("pauseVideo"); }
+    }, { threshold: [0, 0.22, 0.55] }).observe(frame);
+  } else if (embedOK) { load(); }
+})();
+</script>
+</body>
+</html>
